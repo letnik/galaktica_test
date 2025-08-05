@@ -8,21 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Створюємо Intersection Observer
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
-				// Коли елемент стає видимим
-				if (entry.isIntersecting) {
+				// Коли елемент стає видимим (більше 20% видимий)
+				if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
 					// Додаємо клас animate з невеликою затримкою
 					setTimeout(() => {
 						entry.target.classList.add('animate')
-					}, 200)
-					
-					// Припиняємо спостереження після анімації
-					observer.unobserve(entry.target)
+					}, 100)
+				} else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
+					// Коли елемент виходить з видимості (менше 10% видимий) - прибираємо анімацію
+					entry.target.classList.remove('animate')
 				}
 			})
 		}, {
-			// Налаштування observer
-			threshold: 0.3, // Анімація запуститься коли 30% елемента буде видимим
-			rootMargin: '0px 0px -50px 0px' // Додаткова затримка знизу
+			// Налаштування observer з кількома порогами
+			threshold: [0, 0.1, 0.2, 0.3, 0.5, 0.7, 1], // Різні пороги для плавної анімації
+			rootMargin: '0px 0px -30px 0px' // Менша затримка для більш чутливої анімації
 		})
 		
 		// Додаємо кожен елемент до спостереження
