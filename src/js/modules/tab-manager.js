@@ -25,13 +25,31 @@ const initTabs = () => {
   });
   
   function showPanel(panelId) {
-    // Приховуємо всі панелі
-    panels.forEach(panel => panel.classList.remove('tab-panel--active'));
+    // Приховуємо всі панелі та видаляємо анімацію з accent елементів
+    panels.forEach(panel => {
+      panel.classList.remove('tab-panel--active');
+      
+      // Видаляємо клас animate з accent елементів неактивних панелей
+      const accentElements = panel.querySelectorAll('.tab-panel__title-accent');
+      accentElements.forEach(element => {
+        element.classList.remove('animate');
+      });
+    });
     
     // Показуємо цільову панель
     const targetPanel = document.getElementById(panelId);
     if (targetPanel) {
       targetPanel.classList.add('tab-panel--active');
+      
+      // Додаємо анімацію до accent елементів в активній панелі
+      setTimeout(() => {
+        const accentElements = targetPanel.querySelectorAll('.tab-panel__title-accent');
+        accentElements.forEach(element => {
+          if (!element.classList.contains('animate')) {
+            element.classList.add('animate');
+          }
+        });
+      }, 100);
     }
   }
 };
