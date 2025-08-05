@@ -57,4 +57,58 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 })
 
+// Підсвічування активного пункту меню
+function updateActiveNavItem() {
+	const sections = document.querySelectorAll('section[id]')
+	const navLinks = document.querySelectorAll('.nav__link')
+	
+	// Отримуємо поточну позицію скролу
+	const scrollPosition = window.scrollY + 100 // Додаємо відступ для кращої реакції
+	
+	// Знаходимо поточну секцію
+	let currentSection = ''
+	
+	sections.forEach(section => {
+		const sectionTop = section.offsetTop
+		const sectionHeight = section.offsetHeight
+		
+		if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+			currentSection = section.getAttribute('id')
+		}
+	})
+	
+	// Оновлюємо активний пункт меню
+	navLinks.forEach(link => {
+		link.classList.remove('nav__link--active')
+		
+		if (link.getAttribute('href') === `#${currentSection}`) {
+			link.classList.add('nav__link--active')
+		}
+	})
+}
+
+// Додаємо обробники подій
+window.addEventListener('scroll', updateActiveNavItem)
+window.addEventListener('load', updateActiveNavItem)
+
+// Плавний скрол для навігаційних посилань
+document.querySelectorAll('.nav__link').forEach(link => {
+	link.addEventListener('click', function(e) {
+		e.preventDefault()
+		
+		const targetId = this.getAttribute('href')
+		const targetSection = document.querySelector(targetId)
+		
+		if (targetSection) {
+			const headerHeight = document.querySelector('.header').offsetHeight
+			const targetPosition = targetSection.offsetTop - headerHeight - 20
+			
+			window.scrollTo({
+				top: targetPosition,
+				behavior: 'smooth'
+			})
+		}
+	})
+})
+
 
