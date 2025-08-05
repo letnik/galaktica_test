@@ -50,3 +50,7 @@ temp/
 # Large files
 *.fig
 lighthouse-report.html
+
+# Documentation files
+_report.md
+_coverlatter.md

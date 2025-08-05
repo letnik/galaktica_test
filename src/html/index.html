@@ -60,79 +60,77 @@
 	
 	@@include('blocks/header.html')
 
-	<main id="main-content" class="landing">
-		<!-- Головний блок -->
-		<section id="hero" class="hero">
-			<div class="container">
-				<div class="hero__content">
-					<div class="hero__imagebox">
-						<div class="hero__image">
-							<img src="img/Marketing-consulting-amico.svg" alt="Marketing and lead generation illustration" class="hero__img">
+	<main id="main-content" class="tabs-page">
+
+		<!-- Контент секцій -->
+		<div class="tab-content">
+			<!-- Home секція -->
+			<section id="home-content" 
+					 class="tab-panel tab-panel--active">
+				<div class="container">
+					<div class="tab-panel__content">
+						<div class="tab-panel__imagebox">
+							<div class="tab-panel__image">
+								<img src="img/Marketing-consulting-amico.svg" alt="Marketing and lead generation illustration" class="tab-panel__img">
+							</div>
+						</div>
+						<div class="tab-panel__textbox">
+							<h1 class="tab-panel__title">Lorem Ipsum Dolor Sit Amet Consectetur<span class="tab-panel__title-accent">Non Non Quis.</span></h1>
+							<p class="tab-panel__text">
+								Lorem ipsum dolor sit amet consectetur. Faucibus nunc et mattis at feugiat sagittis volutpat. At netus diam ipsum cras turpis imperdiet diam vel consequat. Ultrices in faucibus sodales sed sed. Enim aenean dignissim sed a non mollis. Sed ut arcu enim ullamcorper.
+							</p>
 						</div>
 					</div>
-					<div class="hero__textbox">
-						<h1 class="hero__title">Lorem Ipsum Dolor Sit Amet Consectetur. Mi Cras <span class="hero__title-accent">Non Non Quis.</span></h1>
-						<p class="hero__text">
-							Lorem ipsum dolor sit amet consectetur. Faucibus nunc et mattis at feugiat sagittis volutpat. At netus diam ipsum cras turpis imperdiet diam vel consequat. Ultrices in faucibus sodales sed sed. Enim aenean dignissim sed a non mollis. Sed ut arcu enim ullamcorper.
-						</p>
+				</div>
+			</section>
+
+			<!-- About секція -->
+			<section id="about-content" 
+					 class="tab-panel">
+				<div class="container">
+					<div class="tab-panel__content">
+						<div class="tab-panel__imagebox">
+							<div class="tab-panel__image">
+								<img src="img/Business-deal-amico.svg" alt="Business handshake illustration" class="tab-panel__img">
+							</div>
+						</div>
+						<div class="tab-panel__textbox">
+							<h2 class="tab-panel__title"><span class="tab-panel__title-accent">About Us</span></h2>
+							<p class="tab-panel__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Перша лента -->
+			<!-- Services секція -->
+			<section id="services-content" 
+					 class="tab-panel">
+				<div class="container">
+					<div class="tab-panel__content">
+						<div class="tab-panel__textbox">
+							<h2 class="tab-panel__title"><span class="tab-panel__title-accent">Services</span></h2>
+							<p class="tab-panel__text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
+							</p>
+						</div>
+						<div class="tab-panel__imagebox">
+							<div class="tab-panel__image">
+								<img src="img/Generating-new-leads-amico.svg" alt="Traffic generation and lead magnet illustration" class="tab-panel__img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Лента -->
 		<div class="marquee-section">
 			@@include('blocks/marquee.html')
 		</div>
 
-		<!-- Блок "Про нас" -->
-		<section id="about" class="about">
-			<div class="container">
-				<div class="about__content">
-					<div class="about__imagebox">
-						<div class="about__image">
-							<img src="img/Business-deal-amico.svg" alt="Business handshake illustration" class="about__img">
-						</div>
-					</div>
-					<div class="about__textbox">
-						<h2 class="about__title"><span class="about__title-accent">About Us</span></h2>
-						<p class="about__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Друга лента -->
-		<div class="marquee-section">
-			@@include('blocks/marquee.html')
-		</div>
-
-		<!-- Блок "Сервіси" -->
-		<section id="services" class="services">
-			<div class="container">
-				<div class="services__content">
-					<div class="services__textbox">
-						<h2 class="services__title"><span class="services__title-accent">Services</span></h2>
-						<p class="services__text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
-						</p>
-					</div>
-					<div class="services__imagebox">
-						<div class="services__image">
-							<img src="img/Generating-new-leads-amico.svg" alt="Traffic generation and lead magnet illustration" class="services__img">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Третя лента -->
-		<div class="marquee-section">
-			@@include('blocks/marquee.html')
-		</div>
-
+ 
 	</main>
 
 	@@include('blocks/footer.html')

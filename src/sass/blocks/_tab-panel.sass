@@ -1,5 +1,5 @@
-.hero, .about, .services
-	padding: 100px 0 100px
+.tab-panel
+	padding: 180px 0 100px
 
 	&__content
 		display: flex
@@ -70,32 +70,15 @@
 		&__title
 			font-size: 36px
 
-		&__title-accent::after
-			bottom: 1px
-
 	@media (max-width: 599px)
 		padding: 60px 0 60px
 
 		&__title
 			font-size: 28px
 
-// Додаємо відступ для першого блоку під фіксованим хедером
-.hero
-	padding-top: 180px // Збільшено для фіксованого хедера
 
-// Спеціальні стилі для services (зворотний порядок)
-.services
-	&__content
-		flex-direction: row-reverse
-
-	@media (max-width: 959px)
-		&__content
-			flex-direction: column-reverse
-
-// Загальні стилі для всіх accent елементів
-.hero__title-accent,
-.about__title-accent,
-.services__title-accent
+// Стилі для accent елементів
+.tab-panel__title-accent
 	position: relative
 	z-index: 1
 	display: inline-block

@@ -6,8 +6,8 @@
 	top: 0
 	left: 0
 	right: 0
-	background-color: rgba(255, 255, 255, 0.95)
-	backdrop-filter: blur(10px)
+	background-color: var(--page-bg-tertiary)
+	backdrop-filter: none
 	z-index: 1000
 	transition: all var(--transition-normal)
 
@@ -85,6 +85,13 @@
 		font-family: var(--font-main)
 		transition: color var(--transition-normal)
 		position: relative
+		cursor: pointer
+		background: none
+		border: none
+		padding: 0
+		display: block
+		width: 100%
+		text-align: left
 
 		&:hover
 			color: var(--secondary)
@@ -120,4 +127,15 @@
 				border-radius: 1px
 				transition: all var(--transition-normal)
 				opacity: 1
+
+		// Стилі для таб-навігації
+		&[role="tab"]
+			&:hover
+				color: var(--primary)
+
+			&[aria-selected="true"]
+				color: var(--primary)
+
+				&::after
+					background-color: var(--primary)
 
