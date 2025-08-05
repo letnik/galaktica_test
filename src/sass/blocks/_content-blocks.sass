@@ -1,0 +1,106 @@
+.hero, .about, .services
+	padding: 100px 0 100px
+
+	&__content
+		display: flex
+		gap: 60px
+		align-items: center
+
+	&__imagebox
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 461px
+
+	&__image
+		max-width: 461px
+		width: 461px
+		height: auto
+
+	&__img
+		width: 461px
+		height: auto
+		display: block
+		border-radius: 12px
+
+	&__title
+		font-family: var(--font-titles)
+		font-size: 44px
+		font-weight: 700
+		line-height: 140%
+		color: var(--text-dark)
+		margin: 0
+		margin-bottom: 33px
+
+	&__title-accent
+		position: relative
+		z-index: 1
+		display: inline-block
+
+		&::after
+			content: ''
+			position: absolute
+			bottom: 6px
+			left: 0
+			right: 0
+			height: 10px
+			max-width: 294px
+			background-color: var(--secondary)
+			border-radius: 12px
+			z-index: -1
+
+	&__text
+		font-family: var(--font-main)
+		font-size: 16px
+		font-weight: 300
+		line-height: 150%
+		color: var(--text-light)
+		margin: 0
+
+	// Адаптивність
+	@media (max-width: 1199px)
+		padding: 80px 0 80px
+
+		&__content
+			gap: 40px
+
+		&__title
+			font-size: 40px
+
+		&__text
+			font-size: 16px
+
+		&__imagebox
+			width: 100%
+			max-width: 461px
+
+		&__img
+			width: 100%
+			max-width: 461px
+
+	@media (max-width: 959px)
+		&__content
+			flex-direction: column
+			gap: 40px
+			text-align: left
+
+		&__title
+			font-size: 36px
+
+		&__title-accent::after
+			bottom: 1px
+
+	@media (max-width: 599px)
+		padding: 60px 0 60px
+
+		&__title
+			font-size: 28px
+
+// Спеціальні стилі для services (зворотний порядок)
+.services
+	&__content
+		flex-direction: row-reverse
+
+	@media (max-width: 959px)
+		&__content
+			flex-direction: column-reverse 

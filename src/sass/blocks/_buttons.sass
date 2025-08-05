@@ -1,0 +1,24 @@
+// Кнопки
+.btn
+	border: none
+	cursor: pointer
+	font-family: inherit
+	padding: 14px 30px
+	border-radius: 6px
+	font-weight: 600
+	font-size: 14px
+	transition: all var(--transition-normal)
+	display: flex
+	align-items: center
+	justify-content: center
+
+	// Адаптивність для мобільних
+	@media (max-width: 959px)
+		padding: 11px 26px
+
+	&--primary
+		background-color: var(--primary)
+		color: #fff
+
+		&:hover
+			background-color: var(--secondary) 

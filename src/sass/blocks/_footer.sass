@@ -1,0 +1,140 @@
+.footer
+	background-color: var(--page-bg-secondary)
+	padding: 64px 0
+	color: var(--text-dark)
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 30px
+
+	&__logo
+		display: flex
+		justify-content: center
+
+		&-img
+			height: 48px
+			width: auto
+			display: block
+
+	&__nav
+		&-list
+			display: flex
+			gap: 40px
+			list-style: none
+			margin: 0
+			padding: 0
+			flex-wrap: wrap
+			justify-content: center
+
+		&-item
+			position: relative
+
+		&-link
+			color: var(--text-dark)
+			text-decoration: none
+			font-size: 16px
+			font-weight: 600
+			font-family: var(--font-main)
+			transition: color var(--transition-normal)
+			position: relative
+
+			&:hover
+				color: var(--secondary)
+
+			&::after
+				content: ''
+				position: absolute
+				bottom: -4px
+				left: 50%
+				right: 50%
+				height: 2px
+				background-color: var(--secondary)
+				border-radius: 1px
+				transition: all var(--transition-normal)
+				opacity: 0
+
+			&:hover::after
+				left: 0
+				right: 0
+				opacity: 1
+
+	&__social
+		display: flex
+		gap: 20px
+		justify-content: center
+
+		&-link
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: all var(--transition-normal)
+
+			&:hover
+				transform: translateY(-3px)
+				filter: brightness(1.1)
+
+		&-icon
+			width: 40px
+			height: 40px
+			display: block
+			transition: all var(--transition-normal)
+
+			.social-bg
+				transition: fill var(--transition-normal)
+
+			.social-icon
+				transition: fill var(--transition-normal)
+
+			&:hover .social-bg
+				fill: var(--secondary)
+
+			&:hover .social-icon
+				fill: white
+
+		&-icon
+			width: 40px
+			height: 40px
+			display: block
+
+	&__contact
+		text-align: center
+
+		&-title
+			font-size: 16px
+			font-weight: 700
+			font-family: var(--font-main)
+			color: var(--text-dark)
+			margin: 0 0 8px 0
+
+		&-email
+			color: var(--text-light)
+			text-decoration: none
+			font-size: 16px
+			font-weight: 400
+			font-family: var(--font-main)
+			transition: color var(--transition-normal)
+
+			&:hover
+				color: var(--primary)
+
+	// Адаптивність
+	@media (max-width: 768px)
+		padding: 40px 0 30px
+
+		&__nav-list
+			gap: 20px
+
+		&__social
+			gap: 15px
+
+	@media (max-width: 480px)
+		&__nav-list
+			flex-direction: column
+			gap: 15px
+			text-align: center
+			
+		&__nav-link
+			font-size: 14px
+			font-weight: 300 

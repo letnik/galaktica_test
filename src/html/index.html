@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- SEO Meta Tags -->
+	<title>Galaktica Test - Адаптивний лендінг з анімованими елементами</title>
+	<meta name="description" content="Galaktica Test - сучасний адаптивний лендінг з анімованими елементами та інноваційним дизайном. Створено з використанням сучасних веб-технологій.">
+	<meta name="keywords" content="лендінг, адаптивний дизайн, веб-розробка, анімація, UI/UX, frontend">
+	<meta name="author" content="Galaktica">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="Ukrainian">
+	<meta name="revisit-after" content="7 days">
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://galaktica-test.com/">
+	<meta property="og:title" content="Galaktica Test - Адаптивний лендінг з анімованими елементами">
+	<meta property="og:description" content="Сучасний адаптивний лендінг з анімованими елементами та інноваційним дизайном. Створено з використанням сучасних веб-технологій.">
+	<meta property="og:image" content="./img/og-image.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Galaktica Test - Адаптивний лендінг">
+	<meta property="og:site_name" content="Galaktica Test">
+	<meta property="og:locale" content="uk_UA">
+	
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://galaktica-test.com/">
+	<meta property="twitter:title" content="Galaktica Test - Адаптивний лендінг з анімованими елементами">
+	<meta property="twitter:description" content="Сучасний адаптивний лендінг з анімованими елементами та інноваційним дизайном.">
+	<meta property="twitter:image" content="./img/og-image.jpg">
+	
+	<!-- Additional SEO -->
+	<meta name="theme-color" content="#7F3A6A">
+	<meta name="msapplication-TileColor" content="#7F3A6A">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Galaktica Test">
+	
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://galaktica-test.com/">
+	
+	<!-- Preconnect for performance -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo:wght@400&family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+	
+</head>
+
+<body>
+	
+	@@include('blocks/header.html')
+
+	<main id="main-content" class="landing">
+		<!-- Головний блок -->
+		<section id="hero" class="hero">
+			<div class="container">
+				<div class="hero__content">
+					<div class="hero__imagebox">
+						<div class="hero__image">
+							<img src="img/Marketing-consulting-amico.svg" alt="Marketing and lead generation illustration" class="hero__img">
+						</div>
+					</div>
+					<div class="hero__textbox">
+						<h1 class="hero__title">Lorem Ipsum Dolor Sit Amet Consectetur. Mi Cras <span class="hero__title-accent">Non Non Quis.</span></h1>
+						<p class="hero__text">
+							Lorem ipsum dolor sit amet consectetur. Faucibus nunc et mattis at feugiat sagittis volutpat. At netus diam ipsum cras turpis imperdiet diam vel consequat. Ultrices in faucibus sodales sed sed. Enim aenean dignissim sed a non mollis. Sed ut arcu enim ullamcorper.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Перша лента -->
+		<div class="marquee-section">
+			@@include('blocks/marquee.html')
+		</div>
+
+		<!-- Блок "Про нас" -->
+		<section id="about" class="about">
+			<div class="container">
+				<div class="about__content">
+					<div class="about__imagebox">
+						<div class="about__image">
+							<img src="img/Business-deal-amico.svg" alt="Business handshake illustration" class="about__img">
+						</div>
+					</div>
+					<div class="about__textbox">
+						<h2 class="about__title"><span class="about__title-accent">About Us</span></h2>
+						<p class="about__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Друга лента -->
+		<div class="marquee-section">
+			@@include('blocks/marquee.html')
+		</div>
+
+		<!-- Блок "Сервіси" -->
+		<section id="services" class="services">
+			<div class="container">
+				<div class="services__content">
+					<div class="services__textbox">
+						<h2 class="services__title"><span class="services__title-accent">Services</span></h2>
+						<p class="services__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
+						</p>
+					</div>
+					<div class="services__imagebox">
+						<div class="services__image">
+							<img src="img/Generating-new-leads-amico.svg" alt="Traffic generation and lead magnet illustration" class="services__img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Третя лента -->
+		<div class="marquee-section">
+			@@include('blocks/marquee.html')
+		</div>
+
+	</main>
+
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+@use '../base/mixins'
+
+.header
+	padding: 24px 0
+
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 0
+
+	&__bottom
+		display: flex
+		justify-content: center
+
+	&__logo
+		display: flex
+		align-items: center
+		gap: 12px
+
+	&__btn
+		// Специфічні стилі для кнопки в header
+		height: 48px
+
+		// Адаптивність для мобільних
+		@media (max-width: 959px)
+			height: 40px
+
+	// Адаптивність
+	@media (max-width: 959px)
+		padding: 0
+
+		&__top
+			padding: 24px 0
+
+		&__bottom
+			padding: 24px 0
+
+
+
+// Логотип
+.logo
+	&__img
+		height: 48px
+		width: auto
+		display: block
+
+		// Адаптивність для мобільних
+		@media (max-width: 959px)
+			height: 36px
+
+// Навігація
+.nav
+	&__list
+		display: flex
+		gap: 40px
+		list-style: none
+		margin: 0
+		padding: 0
+
+	&__item
+		position: relative
+
+	&__link
+		color: var(--text-dark)
+		text-decoration: none
+		font-size: 16px
+		font-weight: 600
+		font-family: var(--font-main)
+		transition: color var(--transition-normal)
+		position: relative
+
+		&:hover
+			color: var(--secondary)
+
+		&::after
+			content: ''
+			position: absolute
+			bottom: -8px
+			left: 50%
+			right: 50%
+			height: 2px
+			background-color: var(--secondary)
+			border-radius: 1px
+			transition: all var(--transition-normal)
+			opacity: 0
+
+		&:hover::after
+			left: 0
+			right: 0
+			opacity: 1
+
+		&--active
+			color: var(--secondary)
+
+			&::after
+				content: ''
+				position: absolute
+				bottom: -8px
+				left: 0
+				right: 0
+				height: 2px
+				background-color: var(--secondary)
+				border-radius: 1px
+				transition: all var(--transition-normal)
+				opacity: 1
+
