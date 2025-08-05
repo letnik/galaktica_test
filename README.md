@@ -29,7 +29,7 @@
 
 1. **Клонуйте репозиторій:**
 ```bash
-git clone https://github.com/your-username/galaktica-test.git
+git clone https://github.com/letnik/galaktica-test.git
 cd galaktica-test
 ```
 
@@ -284,7 +284,7 @@ galaktica-test/
 
 ## 👥 Автори
 
-- **Розробник**: [Ваше ім'я]
+- **Розробник**: Ostap Letnyanchyk
 - **Дизайн**: [Дизайнер]
 - **Тестування**: [Тестувальник]
 
@@ -292,8 +292,8 @@ galaktica-test/
 
 Якщо у вас є питання або проблеми:
 
-- 📧 **Email**: your-email@example.com
-- 💬 **Issues**: [GitHub Issues](https://github.com/your-username/galaktica-test/issues)
+- 📧 **Email**: ostap.letnyanchyk@gmail.com
+- 💬 **Issues**: [GitHub Issues](https://github.com/letnik/galaktica-test/issues)
 - 📖 **Документація**: [docs/](docs/)
 
 ---
@@ -309,4 +309,4 @@ galaktica-test/
 
 ---
 
-*Останнє оновлення: 5 серпня 2025* 
+*Останнє оновлення: 15 січня 2025* 

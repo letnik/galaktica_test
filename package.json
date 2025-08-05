@@ -17,7 +17,7 @@
 		"gulp",
 		"bem"
 	],
-	"author": "Your Name",
+	"author": "Ostap Letnyanchyk",
 	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.22.5",
