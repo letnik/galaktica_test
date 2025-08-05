@@ -46,3 +46,7 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# Large files
+*.fig
+lighthouse-report.html
