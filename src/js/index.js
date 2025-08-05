@@ -10,21 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Створюємо Intersection Observer
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
-				// Коли елемент стає видимим (більше 20% видимий)
-				if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
-					// Додаємо клас animate з більшою затримкою
+				// Коли елемент стає видимим (більше 10% видимий)
+				if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+					// Додаємо клас animate з затримкою
 					setTimeout(() => {
 						entry.target.classList.add('animate')
-					}, 400) // Збільшено затримку до 400ms
-				} else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-					// Коли елемент виходить з видимості (менше 10% видимий) - прибираємо анімацію швидко
+					}, 400)
+				} else {
+					// Коли елемент виходить з видимості - прибираємо анімацію відразу
 					entry.target.classList.remove('animate')
 				}
 			})
 		}, {
-			// Налаштування observer з кількома порогами
+			// Налаштування observer з порогами
 			threshold: [0, 0.1, 0.2, 0.3, 0.5, 0.7, 1], // Різні пороги для плавної анімації
-			rootMargin: '0px 0px -30px 0px' // Менша затримка для більш чутливої анімації
+			rootMargin: '0px 0px -30px 0px'
 		})
 		
 		// Додаємо кожен елемент до спостереження

@@ -119,9 +119,9 @@
 		opacity: 1
 		transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 
-	// Швидше зникнення
+	// Миттєве зникнення
 	&:not(.animate)::after
-		transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		transition: all 0.15s ease-out
 
 // Адаптивність для accent елементів
 @media (max-width: 959px)
