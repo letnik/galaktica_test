@@ -32,15 +32,6 @@ const initTabs = () => {
     const targetPanel = document.getElementById(panelId);
     if (targetPanel) {
       targetPanel.classList.add('tab-panel--active');
-      
-      // Анімація accent елементів
-      setTimeout(() => {
-        targetPanel.querySelectorAll('.tab-panel__title-accent').forEach(element => {
-          if (!element.classList.contains('animate')) {
-            element.classList.add('animate');
-          }
-        });
-      }, 100);
     }
   }
 };
