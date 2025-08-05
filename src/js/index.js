@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Знаходимо всі accent елементи
 	const accentElements = document.querySelectorAll('.hero__title-accent, .about__title-accent, .services__title-accent')
 	
+
+	
 	// Перевіряємо підтримку Intersection Observer
 	if ('IntersectionObserver' in window) {
 		// Створюємо Intersection Observer
@@ -10,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			entries.forEach(entry => {
 				// Коли елемент стає видимим (більше 20% видимий)
 				if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
-					// Додаємо клас animate з невеликою затримкою
+					// Додаємо клас animate з більшою затримкою
 					setTimeout(() => {
 						entry.target.classList.add('animate')
-					}, 100)
+					}, 400) // Збільшено затримку до 400ms
 				} else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-					// Коли елемент виходить з видимості (менше 10% видимий) - прибираємо анімацію
+					// Коли елемент виходить з видимості (менше 10% видимий) - прибираємо анімацію швидко
 					entry.target.classList.remove('animate')
 				}
 			})
